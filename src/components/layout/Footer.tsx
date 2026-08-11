@@ -65,6 +65,20 @@ export function Footer() {
                 <span className="block text-base">{contactDetails.instagramHandle}</span>
               </span>
             </a>
+            <a
+              href={contactDetails.facebookHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-white/72 hover:text-white"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/5 text-[#DCAC74]">
+                <SocialIcon label="Facebook" className="h-5 w-5" />
+              </span>
+              <span>
+                <span className="block text-sm uppercase tracking-[0.2em] text-white/45">Facebook</span>
+                <span className="block text-base">Thunder Road Stables</span>
+              </span>
+            </a>
           </div>
         </div>
 
