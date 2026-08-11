@@ -82,9 +82,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 pt-8 text-sm text-white/42 md:flex-row md:items-center md:justify-between">
+        <div className="pt-8 text-sm text-white/42">
           <p>© 2025 Thunder Road Stables.</p>
-          <p>{contactDetails.name}</p>
         </div>
       </div>
     </footer>
