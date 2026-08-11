@@ -5,7 +5,7 @@ import { AnimatedSection } from '../ui/AnimatedSection';
 export function CallToAction() {
   return (
     <section className="relative overflow-hidden bg-[#111517] py-28 text-white md:py-36">
-      <img src="/gallery/news-1.jpg" alt="Thunder Road Stables farm view" className="absolute inset-0 h-full w-full object-cover" />
+      <img src="/gallery/photo-3.jpg" alt="Thunder Road Stables farm view" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,21,23,0.3),rgba(17,21,23,0.88))]" />
 
