@@ -58,7 +58,7 @@ export function Training() {
                 and setup to support it.
               </p>
               <p>Outside trainers are also welcome to bring their programs to the farm.</p>
-              <p className="text-base text-[#6B6258]">Pricing varies by program. Call to discuss rates and availability.</p>
+              <p className="text-base text-[#6B6258]">Rates depend on the program, schedule, and level of support needed.</p>
             </div>
           </div>
         </AnimatedSection>
@@ -70,50 +70,35 @@ export function Training() {
             body="Programs can be tailored to age, experience level, and training goals."
           />
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {trainingPrograms.map((program, index) => (
-              <div
-                key={program.title}
-                className={`rounded-[1.75rem] p-7 shadow-[0_20px_45px_rgba(17,21,23,0.08)] ring-1 ring-black/5 ${
-                  index === 0 || index === 3 ? 'bg-[#242323] text-white' : 'bg-white/92 text-[#242323]'
-                }`}
-              >
-                <h3 className="text-2xl leading-tight">{program.title}</h3>
-                <p className={`mt-4 leading-8 ${index === 0 || index === 3 ? 'text-white/74' : 'text-[#595959]'}`}>
-                  {program.description}
-                </p>
+          <div className="mt-12 border-t border-[#242323]/10 bg-transparent">
+            {trainingPrograms.map((program) => (
+              <div key={program.title} className="border-b border-[#242323]/10 py-8 md:py-10">
+                <div className="max-w-4xl">
+                  <h3 className="text-3xl leading-tight text-[#DCAC74] md:text-4xl">{program.title}</h3>
+                  <p className="mt-4 max-w-3xl text-lg leading-8 text-[#595959]">{program.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.16} className="mb-16 overflow-hidden rounded-[2rem] bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <img src="/gallery/photo-5.jpg" alt="Horse and rider training at Thunder Road Stables" className="h-full min-h-[320px] w-full object-cover" />
-            <div className="p-8 md:p-10">
-              <SectionIntro
-                label="Facility highlights"
-                title="The setup gives riders and trainers room to work year round."
-                body="From ring work to longer rides across the property, the farm supports a wide range of programs."
-                invert
-              />
-              <ul className="mt-8 space-y-4">
-                {facilityHighlights.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-white/78">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#DCAC74]" />
-                    <span className="leading-7">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <AnimatedSection delay={0.16} className="mb-16 border-y border-[#242323]/10 py-10 md:py-12">
+          <div className="max-w-5xl">
+            <p className="text-xs uppercase tracking-[0.36em] text-[#9a7a56]">Facility highlights</p>
+            <p className="mt-5 text-xl leading-8 text-[#242323] md:text-2xl md:leading-9">
+              {facilityHighlights.join(' • ')}
+            </p>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-[#6B6258] md:text-lg md:leading-8">
+              The farm gives riders and trainers room to work through the seasons, from ring sessions to longer rides across the property.
+            </p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.24}>
           <div className="rounded-[2rem] bg-[#E8D6BE] p-8 text-[#242323] shadow-[0_24px_50px_rgba(17,21,23,0.08)] ring-1 ring-black/5 md:p-10">
-            <p className="text-xs uppercase tracking-[0.36em] text-[#7B5E3C]">Call to discuss</p>
+            <p className="text-xs uppercase tracking-[0.36em] text-[#7B5E3C]">Get in touch</p>
             <h2 className="mt-5 max-w-3xl text-4xl leading-tight md:text-5xl">
-              Every horse and rider is different. Call to talk through what you&apos;re looking for and we&apos;ll put together a plan that fits.
+              Every horse and rider is different. Tell us what you need and we&apos;ll talk through the right fit.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#4F463E]">
               Rates depend on the program, schedule, and level of support needed.
@@ -130,7 +115,7 @@ export function Training() {
                 to="/contact"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#111517]/12 bg-white/75 px-7 text-sm tracking-[0.18em] text-[#242323] transition hover:bg-white"
               >
-                Or send us a message
+                Or send a message
               </Link>
             </div>
           </div>

@@ -27,6 +27,7 @@ export const allGalleryImages = [
   '/gallery/news-3.jpg',
   '/gallery/news-4.jpg',
   '/gallery/ribbon-1.jpg',
+  '/gallery/fb-cover.jpg',
 ];
 
 export const homePreviewImages = [

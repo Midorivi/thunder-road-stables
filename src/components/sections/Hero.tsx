@@ -18,30 +18,26 @@ export function Hero() {
 
       <div className="absolute inset-x-0 top-0 z-10 h-48 bg-gradient-to-b from-black/55 to-transparent" />
 
-      <div className="page-shell relative z-20 grid gap-12 py-32 lg:grid-cols-[1.3fr_0.7fr] lg:items-center lg:gap-16">
+      <div className="page-shell relative z-20 flex min-h-screen items-center py-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-5xl"
         >
-          <p className="text-xs uppercase tracking-[0.45em] text-[#DCAC74]/80 md:text-sm">Jamesport, New York</p>
-          <h1 className="mt-4 leading-[0.9]">
-            <span className="block text-6xl font-bold tracking-wide text-[#DCAC74] md:text-8xl lg:text-[6.5rem]">Thunder Road</span>
-            <span className="block text-6xl font-bold tracking-wide text-[#FAF7F2] md:text-8xl lg:text-[6.5rem]">Stables</span>
+          <h1 className="max-w-[12ch] text-5xl font-bold leading-[0.9] tracking-[0.03em] text-[#DCAC74] sm:text-6xl md:text-7xl lg:max-w-none lg:text-[7rem] xl:text-[8rem]">
+            Thunder Road Stables
           </h1>
-          <p className="mt-5 text-xl leading-relaxed text-white/70 md:text-2xl">Where Beauty Meets Exceptional Care</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-[1.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm md:p-10"
-        >
-          <p className="text-lg leading-8 text-white/80 md:text-xl">
+          <p className="mt-5 max-w-3xl text-xl leading-relaxed text-[#FAF7F2] md:text-2xl">
+            Where Beauty Meets Exceptional Care
+          </p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80 md:text-xl">
             108 acres. 90 stalls. Every horse still gets the personal attention as if they&apos;re the only one.
           </p>
-          <Link to="/contact" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-full bg-[#DCAC74] px-8 text-sm tracking-[0.18em] text-[#111517] hover:scale-[1.02] hover:bg-[#e4bc8e]">
+          <Link
+            to="/contact"
+            className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full bg-[#DCAC74] px-8 text-sm tracking-[0.18em] text-[#111517] transition hover:scale-[1.02] hover:bg-[#e4bc8e]"
+          >
             Come See the Farm
           </Link>
         </motion.div>
