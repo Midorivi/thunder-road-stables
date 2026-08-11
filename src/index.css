@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #DCAC74;
+  --color-dark: #242323;
+  --color-darker: #111517;
+  --color-light: #F4F4F4;
+  --color-cream: #FAF7F2;
+
+  --font-sans: 'Lato', sans-serif;
+  --font-serif: 'Arsenal', serif;
+}
+
+@layer base {
+  :root {
+    color: #595959;
+    background: #faf7f2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#FAF7F2] font-sans text-[#595959] antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  a,
+  button {
+    @apply transition-all duration-300;
+  }
+
+  ::selection {
+    background: rgba(220, 172, 116, 0.3);
+    color: #111517;
+  }
+}
+
+@layer utilities {
+  .page-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10;
+  }
+}
