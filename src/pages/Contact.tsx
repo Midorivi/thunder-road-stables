@@ -8,7 +8,7 @@ import { contactDetails } from '../content/site';
 export function Contact() {
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
-      <PageHero title="Contact" subtitle="For boarding questions, current availability, or a visit to the farm." image={asset("/gallery/ribbon-1.jpg")} />
+      <PageHero title="Contact" subtitle="For boarding questions, current availability, or a visit to the farm." image={asset("/gallery/photo-6.jpg")} />
       <div className="page-shell py-24 md:py-32">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <AnimatedSection delay={0.1}>
