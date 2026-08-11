@@ -36,27 +36,46 @@ export function PriceList() {
           ))}
         </div>
 
-        <AnimatedSection delay={0.35} className="mt-12">
-          <p className="mb-6 text-xs uppercase tracking-[0.36em] text-[#9a7a56]">Additional services</p>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {boardingExtras.ringFees.map((item) => (
-              <div key={item.label} className="flex items-center justify-between gap-4 rounded-[1.2rem] bg-white/90 px-6 py-5 ring-1 ring-black/5">
-                <span className="text-[#595959]">{item.label}</span>
-                <span className="whitespace-nowrap font-medium text-[#111517]">{item.value}</span>
+        <AnimatedSection delay={0.35} className="mt-14 overflow-hidden rounded-[2rem] bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
+          <div className="grid lg:grid-cols-3">
+            <div className="border-b border-white/8 p-8 lg:border-b-0 lg:border-r">
+              <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Ring Fees</p>
+              <p className="mt-2 text-sm text-white/50">Helps maintain proper footing, dragging, and care</p>
+              <div className="mt-6 space-y-4">
+                {boardingExtras.ringFees.map((item) => (
+                  <div key={item.label} className="flex items-baseline justify-between gap-4 border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
+                    <span className="text-white/72">{item.label}</span>
+                    <span className="text-right text-sm text-[#DCAC74]">{item.value}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-            {boardingExtras.dailyCare.map((item) => (
-              <div key={item.label} className="flex items-center justify-between gap-4 rounded-[1.2rem] bg-white/90 px-6 py-5 ring-1 ring-black/5">
-                <span className="text-[#595959]">{item.label}</span>
-                <span className="whitespace-nowrap font-medium text-[#111517]">{item.value}</span>
+            </div>
+
+            <div className="border-b border-white/8 p-8 lg:border-b-0 lg:border-r">
+              <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Care Services</p>
+              <p className="mt-2 text-sm text-white/50">Available by request for rough boarders</p>
+              <div className="mt-6 space-y-4">
+                {boardingExtras.dailyCare.map((item) => (
+                  <div key={item.label} className="flex items-baseline justify-between gap-4 border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
+                    <span className="text-white/72">{item.label}</span>
+                    <span className="text-right text-sm text-[#DCAC74]">{item.value}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="mt-4 rounded-[1.2rem] bg-[#242323] px-6 py-5">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#DCAC74]">A la carte</p>
-            <p className="mt-3 leading-8 text-white/72">
-              {boardingExtras.aLaCarte.join(' \u00b7 ')}
-            </p>
+            </div>
+
+            <div className="p-8">
+              <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">A La Carte</p>
+              <p className="mt-2 text-sm text-white/50">Individual services available upon request</p>
+              <ul className="mt-6 space-y-3">
+                {boardingExtras.aLaCarte.map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-white/72">
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#DCAC74]/60" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </AnimatedSection>
 

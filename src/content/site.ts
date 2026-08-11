@@ -4,7 +4,7 @@ import { Camera, HeartHandshake, LandPlot, ShieldCheck } from 'lucide-react';
 export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Our Story', to: '/our-story' },
-  { label: 'Boarding', to: '/price-list' },
+  { label: 'Boarding', to: '/boarding' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Horse of the Month', to: '/horse-of-the-month' },
 ];
