@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Star } from 'lucide-react';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { PageHero } from '../components/ui/PageHero';
@@ -5,6 +6,10 @@ import { asset } from '../lib/utils';
 import { horseOfTheMonthPlaceholder } from '../content/site';
 
 export function HorseOfTheMonth() {
+  useEffect(() => {
+    document.title = 'Horse of the Month | Thunder Road Stables';
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col bg-[#FAF7F2]">
       <PageHero title="Horse of the Month" subtitle="A monthly portrait of one of the horses who shapes the rhythm of the farm." image={asset("/gallery/photo-14.jpg")} />

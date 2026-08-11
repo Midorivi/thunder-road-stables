@@ -10,7 +10,7 @@ interface PageHeroProps {
 export function PageHero({ title, subtitle, label = 'Thunder Road Stables', image = '/gallery/photo-2.jpg' }: PageHeroProps) {
   return (
     <div className="relative overflow-hidden px-4 pb-20 pt-40 md:px-6 md:pb-24 md:pt-48">
-      <img src={image} alt="Thunder Road Stables" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={image} alt={`${title} at Thunder Road Stables`} className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,21,23,0.6),rgba(17,21,23,0.25),rgba(17,21,23,0.7))]" />
       <div className="page-shell relative z-10">
         <AnimatedSection className="max-w-4xl">

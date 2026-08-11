@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
@@ -36,6 +37,10 @@ const facilityHighlights = [
 ];
 
 export function Training() {
+  useEffect(() => {
+    document.title = 'Training and Lessons | Thunder Road Stables';
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
       <PageHero

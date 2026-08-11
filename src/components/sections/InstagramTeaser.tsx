@@ -28,7 +28,7 @@ export function InstagramTeaser() {
           {instagramPreviewImages.map((image, index) => (
             <AnimatedSection key={image} delay={index * 0.08}>
               <div className="overflow-hidden rounded-[1.7rem] shadow-[0_24px_50px_rgba(17,21,23,0.08)] ring-1 ring-black/5">
-                <img src={image} alt={`Instagram preview ${index + 1}`} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+                <img src={image} alt={`Thunder Road Stables Instagram photo ${index + 1}`} className="aspect-[4/3] w-full object-cover" loading="lazy" />
               </div>
             </AnimatedSection>
           ))}

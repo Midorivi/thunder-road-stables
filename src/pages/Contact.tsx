@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { MapPin, Phone, User } from 'lucide-react';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { ContactForm } from '../components/ui/ContactForm';
@@ -6,6 +7,10 @@ import { asset } from '../lib/utils';
 import { contactDetails } from '../content/site';
 
 export function Contact() {
+  useEffect(() => {
+    document.title = 'Contact | Thunder Road Stables';
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
       <PageHero title="Contact" subtitle="For boarding questions, current availability, or a visit to the farm." image={asset("/gallery/photo-6.jpg")} />
@@ -62,8 +67,8 @@ export function Contact() {
 
             <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.08)] ring-1 ring-black/5">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.810574744431!2d-72.5878486845907!3d40.95274997930617!2m3!1f0!2f0!4f13.1!3m3!1m2!1s0x89e88d1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2s1394%20Main%20Rd%2C%20Jamesport%2C%20NY%2011947!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
-                className="h-[360px] w-full border-0"
+                src="https://www.google.com/maps?q=1394+Main+Rd+Jamesport+NY+11947&output=embed"
+                className="h-[300px] w-full border-0"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

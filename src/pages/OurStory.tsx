@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { PageHero } from '../components/ui/PageHero';
@@ -6,6 +7,10 @@ import { asset } from '../lib/utils';
 import { storyHistory, storyMoments } from '../content/site';
 
 export function OurStory() {
+  useEffect(() => {
+    document.title = 'Our Story | Thunder Road Stables';
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
       <PageHero
@@ -46,7 +51,7 @@ export function OurStory() {
               className={`grid gap-8 lg:grid-cols-2 lg:items-center ${index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}
             >
               <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_60px_rgba(17,21,23,0.12)] ring-1 ring-black/5">
-                <img src={moment.image} alt={moment.title} className="aspect-[4/3] w-full object-cover" />
+                <img src={moment.image} alt={`${moment.eyebrow} at Thunder Road Stables`} className="aspect-[4/3] w-full object-cover" />
               </div>
               <article className="rounded-[2rem] bg-white/88 p-8 shadow-[0_24px_50px_rgba(17,21,23,0.07)] ring-1 ring-black/5 backdrop-blur md:p-10">
                 <p className="text-xs uppercase tracking-[0.4em] text-[#9a7a56]">{moment.eyebrow}</p>

@@ -50,7 +50,7 @@ export const homeFeatures: Array<{ title: string; description: string; icon: Luc
   {
     title: 'Hands-On, Personal Care',
     description:
-      'Our experienced staff and live-on-site manager provide daily care and nightly checks. The facilities are meticulously maintained, with fields, paddocks, and grounds always kept in pristine condition. Body work expert on premise. Every horse gets individual attention.',
+      'Our experienced staff and live-on-site manager provide daily care and nightly checks. The fields, paddocks, and barns are kept in good order. A body work expert is on the premises. Every horse gets individual attention.',
     icon: HeartHandshake,
   },
   {
@@ -62,7 +62,7 @@ export const homeFeatures: Array<{ title: string; description: string; icon: Luc
   {
     title: '108 Acres to Roam',
     description:
-      'Two outdoor riding arenas, one indoor arena, and a brand new indoor arena scheduled for construction. A beautifully maintained harness racing practice track. Boarders are welcome to ride the entire property, with stunning views and charming ponds along the way.',
+      'Two outdoor riding arenas, one indoor arena, and a new larger indoor arena approved for construction. A harness racing practice track. Boarders are welcome to ride the entire property, with ponds and open views along the way.',
     icon: LandPlot,
   },
 ];
@@ -112,7 +112,7 @@ export const boardingOptions = [
 
 export const boardingExtras = {
   callout:
-    "Long Island's largest equestrian boarding facility. 108 acres, 90 stalls, and every horse still gets the personal attention as if they're the only one. We customize care to fit each horse's individual needs.",
+    "Long Island's largest equestrian boarding facility. 108 acres, 90 stalls, and personal care for every horse. We adjust care to fit each horse's needs.",
   ringFees: [
     { label: 'Boarders', value: '$30 per use, max $120 per month' },
     { label: 'Visitors', value: '$40 per use' },

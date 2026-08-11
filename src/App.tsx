@@ -5,6 +5,7 @@ import { Contact } from './pages/Contact';
 import { PriceList } from './pages/PriceList';
 import { Gallery } from './pages/Gallery';
 import { HorseOfTheMonth } from './pages/HorseOfTheMonth';
+import { NotFound } from './pages/NotFound';
 import { OurStory } from './pages/OurStory';
 import { Training } from './pages/Training';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="gallery" element={<Gallery />} />
         <Route path="our-story" element={<OurStory />} />
         <Route path="horse-of-the-month" element={<HorseOfTheMonth />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

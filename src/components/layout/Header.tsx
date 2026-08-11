@@ -23,6 +23,14 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
       className={cn(
@@ -37,7 +45,7 @@ export function Header() {
           <Logo className="h-[72px] md:h-[82px]" />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex" role="navigation" aria-label="Primary">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -70,30 +78,47 @@ export function Header() {
           </Link>
         </nav>
 
-        <button className="relative z-50 text-white lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
+        <button
+          type="button"
+          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-[#111517]/80 text-white backdrop-blur-sm lg:hidden"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+        >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       <div
+        id="mobile-menu"
         className={cn(
           'fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#111517] px-6 transition-transform duration-300 lg:hidden',
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
         <Logo className="h-[76px]" />
-        {navLinks.map((link) => (
-          <Link key={link.to} to={link.to} className={cn('text-center text-2xl text-white/82', location.pathname === link.to && 'text-[#DCAC74]')}>
-            {link.label}
+        <nav className="flex w-full max-w-sm flex-col items-center gap-3" role="navigation" aria-label="Mobile">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className={cn(
+                'inline-flex min-h-11 w-full items-center justify-center rounded-full px-6 text-center text-2xl text-white/82',
+                location.pathname === link.to && 'text-[#DCAC74]'
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a href={contactDetails.phoneHref} className="flex min-h-11 items-center gap-2 text-lg text-[#DCAC74]">
+            <Phone className="h-5 w-5" />
+            {contactDetails.phone}
+          </a>
+          <Link to="/contact" className="inline-flex min-h-12 items-center rounded-full border border-[#DCAC74] bg-[#DCAC74] px-7 text-sm tracking-[0.18em] text-[#111517]">
+            Contact
           </Link>
-        ))}
-        <a href={contactDetails.phoneHref} className="flex items-center gap-2 text-lg text-[#DCAC74]">
-          <Phone className="h-5 w-5" />
-          {contactDetails.phone}
-        </a>
-        <Link to="/contact" className="inline-flex min-h-12 items-center rounded-full border border-[#DCAC74] bg-[#DCAC74] px-7 text-sm tracking-[0.18em] text-[#111517]">
-          Contact
-        </Link>
+        </nav>
       </div>
     </header>
   );

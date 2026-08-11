@@ -37,7 +37,7 @@ export function Footer() {
 
           <div className="space-y-5">
             <p className="text-xs uppercase tracking-[0.38em] text-[#DCAC74]/85">Navigate</p>
-            <nav className="space-y-3">
+            <nav className="space-y-3" role="navigation" aria-label="Footer">
               {navLinks.map((link) => (
                 <Link key={link.to} to={link.to} className="block text-white/72 hover:text-white">
                   {link.label}
@@ -55,6 +55,7 @@ export function Footer() {
               href={contactDetails.instagramHref}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Thunder Road Stables on Instagram"
               className="inline-flex items-center gap-3 text-white/72 hover:text-white"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/5 text-[#DCAC74]">
@@ -69,6 +70,7 @@ export function Footer() {
               href={contactDetails.facebookHref}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit Thunder Road Stables on Facebook"
               className="inline-flex items-center gap-3 text-white/72 hover:text-white"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/5 text-[#DCAC74]">

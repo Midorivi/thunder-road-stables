@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { PageHero } from '../components/ui/PageHero';
@@ -7,6 +8,10 @@ import { asset } from '../lib/utils';
 import { boardingExtras, boardingOptions } from '../content/site';
 
 export function PriceList() {
+  useEffect(() => {
+    document.title = 'Boarding | Thunder Road Stables';
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
       <PageHero title="Boarding" subtitle="Long Island's largest equestrian boarding facility, with room to customize care around each horse." image={asset("/gallery/photo-8.jpg")} />

@@ -21,7 +21,7 @@ export function GalleryPreview() {
           {homePreviewImages.map((src, index) => (
             <AnimatedSection key={src} delay={index * 0.1}>
               <div className="group relative overflow-hidden rounded-[1.7rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5">
-                <img src={src} alt={`Gallery preview ${index + 1}`} className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
+                <img src={src} alt={`Preview of Thunder Road Stables photo ${index + 1}`} className="aspect-[4/3] h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,21,23,0),rgba(17,21,23,0.35))]" />
               </div>
             </AnimatedSection>
