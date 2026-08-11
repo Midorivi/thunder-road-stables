@@ -11,8 +11,7 @@ export function PageHero({ title, subtitle, label = 'Thunder Road Stables', imag
   return (
     <div className="relative overflow-hidden px-4 pb-20 pt-40 md:px-6 md:pb-24 md:pt-48">
       <img src={image} alt="Thunder Road Stables" className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-black/50" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,21,23,0.9),rgba(17,21,23,0.58),rgba(17,21,23,0.92))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,21,23,0.6),rgba(17,21,23,0.25),rgba(17,21,23,0.7))]" />
       <div className="page-shell relative z-10">
         <AnimatedSection className="max-w-4xl">
           <p className="text-xs uppercase tracking-[0.42em] text-[#DCAC74]/88">{label}</p>
