@@ -3,12 +3,13 @@ import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { PageHero } from '../components/ui/PageHero';
 import { PricingCard } from '../components/ui/PricingCard';
 import { SectionIntro } from '../components/ui/SectionIntro';
+import { asset } from '../lib/utils';
 import { boardingExtras, boardingOptions } from '../content/site';
 
 export function PriceList() {
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
-      <PageHero title="Boarding" subtitle="Long Island's largest equestrian boarding facility, with room to customize care around each horse." image="/gallery/photo-8.jpg" />
+      <PageHero title="Boarding" subtitle="Long Island's largest equestrian boarding facility, with room to customize care around each horse." image={asset("/gallery/photo-8.jpg")} />
       <div className="page-shell py-24 md:py-32">
         <AnimatedSection className="mb-14">
           <SectionIntro
@@ -24,7 +25,7 @@ export function PriceList() {
               <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Why board here</p>
               <p className="mt-5 text-2xl leading-10 text-white md:text-[2rem]">{boardingExtras.callout}</p>
             </div>
-            <img src="/gallery/news-4.jpg" alt="Thunder Road Stables paddocks and barns" className="h-full min-h-[280px] w-full object-cover" />
+            <img src={asset("/gallery/news-4.jpg")} alt="Thunder Road Stables paddocks and barns" className="h-full min-h-[280px] w-full object-cover" />
           </div>
         </AnimatedSection>
 
@@ -38,7 +39,7 @@ export function PriceList() {
 
         <AnimatedSection delay={0.28} className="mt-14 overflow-hidden rounded-[2rem] bg-[#1B1A1A] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-            <img src="/gallery/photo-5.jpg" alt="Harness racing horse training at Thunder Road Stables" className="h-full min-h-[300px] w-full object-cover" />
+            <img src={asset("/gallery/photo-5.jpg")} alt="Harness racing horse training at Thunder Road Stables" className="h-full min-h-[300px] w-full object-cover" />
             <div className="p-8 md:p-10">
               <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Harness racing</p>
               <h2 className="mt-5 max-w-2xl text-3xl leading-tight text-[#FAF7F2] md:text-[2.5rem]">

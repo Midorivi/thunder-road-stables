@@ -1,3 +1,4 @@
+import { asset } from '../../lib/utils';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { SectionIntro } from '../ui/SectionIntro';
 
@@ -7,7 +8,7 @@ export function LottiLucky() {
       <div className="page-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <AnimatedSection>
           <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_55px_rgba(17,21,23,0.08)] ring-1 ring-black/5">
-            <img src="/gallery/photo-12.jpg" alt="Thunder Road Stables horse in the paddock" className="aspect-[4/3] w-full object-cover" />
+            <img src={asset("/gallery/photo-12.jpg")} alt="Thunder Road Stables horse in the paddock" className="aspect-[4/3] w-full object-cover" />
           </div>
         </AnimatedSection>
 

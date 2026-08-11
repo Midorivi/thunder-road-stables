@@ -3,6 +3,7 @@ import { Phone } from 'lucide-react';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { PageHero } from '../components/ui/PageHero';
 import { SectionIntro } from '../components/ui/SectionIntro';
+import { asset } from '../lib/utils';
 import { contactDetails } from '../content/site';
 
 const trainingPrograms = [
@@ -40,7 +41,7 @@ export function Training() {
       <PageHero
         title="Training and Lessons"
         subtitle="Structured programs for riders and horses at every level."
-        image="/gallery/photo-11.jpg"
+        image={asset("/gallery/photo-11.jpg")}
       />
 
       <div className="page-shell py-24 md:py-32">

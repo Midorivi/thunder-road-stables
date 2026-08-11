@@ -1,5 +1,6 @@
 import type { LucideIcon } from 'lucide-react';
 import { Camera, HeartHandshake, LandPlot, ShieldCheck } from 'lucide-react';
+import { asset } from '../lib/utils';
 
 export const navLinks = [
   { label: 'Home', to: '/' },
@@ -21,23 +22,23 @@ export const contactDetails = {
 };
 
 export const allGalleryImages = [
-  ...Array.from({ length: 15 }, (_, index) => `/gallery/photo-${index + 1}.jpg`),
-  '/gallery/news-1.jpg',
-  '/gallery/news-2.jpg',
-  '/gallery/news-3.jpg',
-  '/gallery/news-4.jpg',
-  '/gallery/ribbon-1.jpg',
-  '/gallery/fb-cover.jpg',
+  ...Array.from({ length: 15 }, (_, index) => asset(`/gallery/photo-${index + 1}.jpg`)),
+  asset('/gallery/news-1.jpg'),
+  asset('/gallery/news-2.jpg'),
+  asset('/gallery/news-3.jpg'),
+  asset('/gallery/news-4.jpg'),
+  asset('/gallery/ribbon-1.jpg'),
+  asset('/gallery/fb-cover.jpg'),
 ];
 
 export const homePreviewImages = [
-  '/gallery/photo-7.jpg',
-  '/gallery/photo-8.jpg',
-  '/gallery/news-1.jpg',
-  '/gallery/photo-11.jpg',
+  asset('/gallery/photo-7.jpg'),
+  asset('/gallery/photo-8.jpg'),
+  asset('/gallery/news-1.jpg'),
+  asset('/gallery/photo-11.jpg'),
 ];
 
-export const instagramPreviewImages = ['/gallery/photo-2.jpg', '/gallery/photo-9.jpg', '/gallery/news-3.jpg'];
+export const instagramPreviewImages = [asset('/gallery/photo-2.jpg'), asset('/gallery/photo-9.jpg'), asset('/gallery/news-3.jpg')];
 
 export const homeFeatures: Array<{ title: string; description: string; icon: LucideIcon }> = [
   {
@@ -139,7 +140,7 @@ export const storyMoments = [
       'She became an elementary school teacher, then spent 25 years as a stay-at-home mom raising two sons. The horse dream never left.',
       '"The same girl who wished for a horse on every birthday candle and shooting star now has a whole horse farm." That\u2019s how she announced it. "This was every wish on every shooting star. This was every birthday candle I blew out. This was it."',
     ],
-    image: '/gallery/photo-6.jpg',
+    image: asset('/gallery/news-1.jpg'),
   },
   {
     eyebrow: 'A shared chapter',
@@ -149,7 +150,7 @@ export const storyMoments = [
       'Deb and Ken have been married for 30 years. Their sons fell in love with a horse named Lotti during riding lessons in Middle Island, and in 2015 Lotti became the first horse Deb ever owned. Lucky followed in 2020, a rescue from South Dakota carrying his own history. Both live at the farm now.',
       '"This has really been our dream together," Ken says. "This is our little slice of heaven that we\u2019ve created here."',
     ],
-    image: '/gallery/photo-8.jpg',
+    image: asset('/gallery/news-2.jpg'),
   },
   {
     eyebrow: 'Why "Thunder Road"',
@@ -159,7 +160,7 @@ export const storyMoments = [
       '"The lyrics even speak of heaven waiting down by the tracks. In my case, the heaven of watching the harness racing horses on the practice track and hearing their hoof steps carry across the farm."',
       'She almost second-guessed the name. But then, feeling lonesome for her dad one day, she came across a reel about how a Native American tribe says when you lose your father, he comes back in the thunder. "That solidified my choice. Thunder Road Stables it shall be."',
     ],
-    image: '/gallery/news-1.jpg',
+    image: asset('/gallery/news-4.jpg'),
   },
   {
     eyebrow: 'The property',
@@ -169,7 +170,7 @@ export const storyMoments = [
       'Suffolk County purchased the development rights in 1979. The land will never be developed. It changed hands a few more times before Brian and Jennifer Nixon ran it as B.J. Farms for over 30 years.',
       'Deb and Ken had been boarding Lotti and Lucky here for four years when the Nixons decided to sell. They closed on February 13, 2026 for $3.5 million, kept all six employees, and got to work. The Blizzard of 2026 hit their first month. "If we could make it through the blizzard," Ken said, "the summer will be easy."',
     ],
-    image: '/gallery/news-2.jpg',
+    image: asset('/gallery/fb-cover.jpg'),
   },
 ];
 

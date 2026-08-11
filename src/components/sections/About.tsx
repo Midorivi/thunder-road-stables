@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { asset } from '../../lib/utils';
 import { AnimatedSection } from '../ui/AnimatedSection';
 
 export function About() {
@@ -13,7 +14,7 @@ export function About() {
     <section className="bg-[#FAF7F2] py-28 md:py-36">
       <div className="page-shell">
         <AnimatedSection className="mb-14 overflow-hidden rounded-[2rem] shadow-[0_32px_80px_rgba(17,21,23,0.12)] ring-1 ring-black/5">
-          <img src="/gallery/photo-8.jpg" alt="Thunder Road Stables barns, paddocks and open fields" className="aspect-[21/9] w-full object-cover" />
+          <img src={asset("/gallery/photo-8.jpg")} alt="Thunder Road Stables barns, paddocks and open fields" className="aspect-[21/9] w-full object-cover" />
         </AnimatedSection>
 
         <AnimatedSection delay={0.08}>

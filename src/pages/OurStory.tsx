@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { PageHero } from '../components/ui/PageHero';
 import { SectionIntro } from '../components/ui/SectionIntro';
+import { asset } from '../lib/utils';
 import { storyHistory, storyMoments } from '../content/site';
 
 export function OurStory() {
@@ -10,7 +11,7 @@ export function OurStory() {
       <PageHero
         title="Our Story"
         subtitle="A family dream, a farm people already loved, and the work of keeping it a horse farm."
-        image="/gallery/news-2.jpg"
+        image={asset("/gallery/ribbon-1.jpg")}
       />
 
       <section className="py-24 md:py-32">
@@ -23,7 +24,7 @@ export function OurStory() {
             />
             <div className="space-y-6">
               <div className="overflow-hidden rounded-[2rem] shadow-[0_32px_80px_rgba(17,21,23,0.12)] ring-1 ring-black/5">
-                <img src="/gallery/photo-7.jpg" alt="Thunder Road Stables paddocks and fencing" className="aspect-[4/3] w-full object-cover" />
+                <img src={asset("/gallery/news-3.jpg")} alt="Thunder Road Stables paddocks and fencing" className="aspect-[4/3] w-full object-cover" />
               </div>
               <blockquote className="rounded-[1.5rem] bg-[#111517] p-8 md:p-10">
                 <p className="text-xl leading-relaxed text-[#DCAC74] md:text-2xl">

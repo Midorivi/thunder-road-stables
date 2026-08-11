@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { asset } from '../../lib/utils';
 
 export function Hero() {
   const ref = useRef(null);
@@ -11,7 +12,7 @@ export function Hero() {
   return (
     <section ref={ref} className="relative flex min-h-screen items-center overflow-hidden bg-[#111517]">
       <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
-        <img src="/gallery/photo-7.jpg" alt="Thunder Road Stables horses and barns" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={asset("/gallery/fb-cover.jpg")} alt="Thunder Road Stables horses and barns" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 z-10 bg-black/45" />
         <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(220,172,116,0.18),transparent_34%),linear-gradient(180deg,rgba(17,21,23,0.42),rgba(17,21,23,0.78))]" />
       </motion.div>
