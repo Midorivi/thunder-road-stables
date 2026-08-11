@@ -6,6 +6,7 @@ import { PriceList } from './pages/PriceList';
 import { Gallery } from './pages/Gallery';
 import { HorseOfTheMonth } from './pages/HorseOfTheMonth';
 import { OurStory } from './pages/OurStory';
+import { Training } from './pages/Training';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="boarding" element={<PriceList />} />
+        <Route path="training" element={<Training />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="our-story" element={<OurStory />} />
         <Route path="horse-of-the-month" element={<HorseOfTheMonth />} />

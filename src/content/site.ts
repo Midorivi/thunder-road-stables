@@ -5,6 +5,7 @@ export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Our Story', to: '/our-story' },
   { label: 'Boarding', to: '/boarding' },
+  { label: 'Training', to: '/training' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Horse of the Month', to: '/horse-of-the-month' },
 ];

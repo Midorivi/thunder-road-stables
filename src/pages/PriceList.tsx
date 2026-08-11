@@ -36,6 +36,31 @@ export function PriceList() {
           ))}
         </div>
 
+        <AnimatedSection delay={0.28} className="mt-14 overflow-hidden rounded-[2rem] bg-[#1B1A1A] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <img src="/gallery/photo-5.jpg" alt="Harness racing horse training at Thunder Road Stables" className="h-full min-h-[300px] w-full object-cover" />
+            <div className="p-8 md:p-10">
+              <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Harness racing</p>
+              <h2 className="mt-5 max-w-2xl text-3xl leading-tight text-[#FAF7F2] md:text-[2.5rem]">
+                Harness racing is part of the farm&apos;s daily rhythm.
+              </h2>
+              <p className="mt-5 max-w-2xl leading-8 text-white/74">
+                About 18 race horses currently train at Thunder Road Stables. Jockeys use the half-mile
+                harness racing practice track before competing at Yonkers Raceway, Monticello Raceway,
+                and the Meadowlands in New Jersey.
+              </p>
+              <div className="mt-6 grid gap-4 text-sm leading-7 text-white/68 md:grid-cols-2">
+                <p className="rounded-[1.25rem] border border-white/10 bg-white/5 p-4">
+                  The farm&apos;s harness racing roots go back to the B.J. Farms era and still shape the property today.
+                </p>
+                <p className="rounded-[1.25rem] border border-white/10 bg-white/5 p-4">
+                  Boarders with racing horses have full access to the track as part of the setup here.
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
         <AnimatedSection delay={0.35} className="mt-14 overflow-hidden rounded-[2rem] bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
           <div className="grid lg:grid-cols-3">
             <div className="border-b border-white/8 p-8 lg:border-b-0 lg:border-r">
