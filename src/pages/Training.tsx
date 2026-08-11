@@ -83,15 +83,24 @@ export function Training() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.16} className="mb-16 border-y border-[#242323]/10 py-10 md:py-12">
-          <div className="max-w-5xl">
-            <p className="text-xs uppercase tracking-[0.36em] text-[#9a7a56]">Facility highlights</p>
-            <p className="mt-5 text-xl leading-8 text-[#242323] md:text-2xl md:leading-9">
-              {facilityHighlights.join(' • ')}
-            </p>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-[#6B6258] md:text-lg md:leading-8">
-              The farm gives riders and trainers room to work through the seasons, from ring sessions to longer rides across the property.
-            </p>
+        <AnimatedSection delay={0.16} className="mb-16">
+          <div className="overflow-hidden rounded-[2rem] bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
+            <div className="grid lg:grid-cols-[1fr_1fr]">
+              <div className="p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Where you ride</p>
+                <h3 className="mt-5 text-3xl leading-tight text-[#FAF7F2] md:text-4xl">Room to work through every season.</h3>
+                <p className="mt-5 text-lg leading-8 text-white/70">
+                  From ring sessions to longer rides across the property, the farm gives riders and trainers space to build at their own pace.
+                </p>
+              </div>
+              <div className="grid grid-cols-2">
+                {facilityHighlights.map((item) => (
+                  <div key={item} className="border-l border-t border-white/8 p-6">
+                    <p className="text-base leading-7 text-white/72">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </AnimatedSection>
 
