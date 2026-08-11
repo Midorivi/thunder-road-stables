@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { contactDetails } from '../../content/site';
 
 export function Hero() {
   const ref = useRef(null);
@@ -26,10 +25,13 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl"
         >
-          <p className="mb-5 text-xs uppercase tracking-[0.45em] text-white/76 md:text-sm">Jamesport, New York</p>
-          <h1 className="max-w-3xl text-5xl leading-[0.95] text-[#FAF7F2] md:text-7xl lg:text-[5.5rem]">
-            Where Beauty Meets Exceptional Care
+          <p className="mb-4 text-xs uppercase tracking-[0.45em] text-white/60 md:text-sm">Jamesport, New York</p>
+          <h1 className="text-5xl font-bold leading-[0.95] tracking-wider text-[#DCAC74] md:text-7xl lg:text-[5.5rem]">
+            Thunder Road Stables
           </h1>
+          <p className="mt-6 max-w-3xl text-2xl leading-snug text-[#FAF7F2] md:text-4xl lg:text-5xl">
+            Where Beauty Meets Exceptional Care
+          </p>
         </motion.div>
 
         <motion.div
@@ -47,14 +49,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-12 flex flex-col gap-4 sm:flex-row"
+          className="mt-12"
         >
           <Link to="/contact" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#DCAC74] px-8 text-sm tracking-[0.18em] text-[#111517] hover:scale-[1.02] hover:bg-[#e4bc8e]">
             Come See the Farm
           </Link>
-          <a href={contactDetails.phoneHref} className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/28 bg-white/8 px-8 text-sm tracking-[0.18em] text-white backdrop-blur-sm hover:border-white/50 hover:bg-white/12">
-            {contactDetails.phone}
-          </a>
         </motion.div>
       </div>
     </section>

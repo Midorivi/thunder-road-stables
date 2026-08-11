@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { navLinks } from '../../content/site';
+import { Menu, Phone, X } from 'lucide-react';
+import { contactDetails, navLinks } from '../../content/site';
 import { cn } from '../../lib/utils';
 import { Logo } from '../Logo';
 
@@ -56,9 +56,15 @@ export function Header() {
               />
             </Link>
           ))}
+
+          <a href={contactDetails.phoneHref} className="ml-2 flex items-center gap-2 text-sm tracking-wide text-[#DCAC74] hover:text-[#e4bc8e]">
+            <Phone className="h-4 w-4" />
+            {contactDetails.phone}
+          </a>
+
           <Link
             to="/contact"
-            className="ml-2 inline-flex min-h-12 items-center justify-center rounded-full border border-[#DCAC74] bg-[#DCAC74] px-6 text-sm tracking-[0.18em] text-[#111517] hover:scale-[1.02] hover:bg-[#e3b882]"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#DCAC74] bg-[#DCAC74] px-6 text-sm tracking-[0.18em] text-[#111517] hover:scale-[1.02] hover:bg-[#e3b882]"
           >
             Contact
           </Link>
@@ -81,6 +87,10 @@ export function Header() {
             {link.label}
           </Link>
         ))}
+        <a href={contactDetails.phoneHref} className="flex items-center gap-2 text-lg text-[#DCAC74]">
+          <Phone className="h-5 w-5" />
+          {contactDetails.phone}
+        </a>
         <Link to="/contact" className="inline-flex min-h-12 items-center rounded-full border border-[#DCAC74] bg-[#DCAC74] px-7 text-sm tracking-[0.18em] text-[#111517]">
           Contact
         </Link>

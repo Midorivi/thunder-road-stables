@@ -77,10 +77,6 @@ export const testimonials = [
     quote: 'This is the piece of heaven that everybody loves out here.',
     author: 'Councilwoman Joann Waski',
   },
-  {
-    quote: "It's just beautiful. A little piece of heaven.",
-    author: 'Deborah Zilnicki',
-  },
 ];
 
 export const boardingOptions = [
