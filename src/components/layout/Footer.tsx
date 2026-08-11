@@ -3,6 +3,7 @@ import { MapPin, Phone } from 'lucide-react';
 import { contactDetails, navLinks, springsteenLine } from '../../content/site';
 import { Logo } from '../Logo';
 import { SocialIcon } from '../ui/SocialIcon';
+import { WeatherWidget } from '../ui/WeatherWidget';
 
 export function Footer() {
   return (
@@ -32,6 +33,9 @@ export function Footer() {
               <a href={contactDetails.phoneHref} className="hover:text-white">
                 {contactDetails.phone}
               </a>
+            </div>
+            <div className="pt-2">
+              <WeatherWidget />
             </div>
           </div>
 

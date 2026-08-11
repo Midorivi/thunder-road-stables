@@ -1,13 +1,49 @@
+import { animate, useInView, useMotionValue } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { asset } from '../../lib/utils';
 import { AnimatedSection } from '../ui/AnimatedSection';
 
+interface Stat {
+  value: number;
+  suffix?: string;
+  label: string;
+}
+
+function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
+  const ref = useRef<HTMLParagraphElement | null>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.6 });
+  const motionValue = useMotionValue(0);
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) {
+      return;
+    }
+
+    const controls = animate(motionValue, target, {
+      duration: 1.5,
+      ease: 'easeOut',
+      onUpdate: (latest) => setDisplayValue(Math.round(latest)),
+    });
+
+    return () => controls.stop();
+  }, [isInView, motionValue, target]);
+
+  return (
+    <p ref={ref} className="text-5xl text-[#111517]">
+      {displayValue}
+      {suffix}
+    </p>
+  );
+}
+
 export function About() {
-  const stats = [
-    { value: '108', label: 'preserved acres on the North Fork' },
-    { value: '90', label: 'stalls with room to grow' },
-    { value: '6', label: 'experienced team members' },
-    { value: '50+', label: 'horses currently boarding' },
+  const stats: Stat[] = [
+    { value: 108, label: 'preserved acres on the North Fork' },
+    { value: 90, label: 'stalls with room to grow' },
+    { value: 6, label: 'experienced team members' },
+    { value: 50, suffix: '+', label: 'horses currently boarding' },
   ];
 
   return (
@@ -28,7 +64,7 @@ export function About() {
         <AnimatedSection delay={0.14} className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="rounded-[1.5rem] bg-white/90 p-6 ring-1 ring-black/5">
-              <p className="text-5xl text-[#111517]">{stat.value}</p>
+              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
               <p className="mt-2 leading-7 text-[#595959]">{stat.label}</p>
             </div>
           ))}

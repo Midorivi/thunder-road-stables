@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
+import { BoarderInquiryForm } from '../components/ui/BoarderInquiryForm';
 import { PageHero } from '../components/ui/PageHero';
 import { PricingCard } from '../components/ui/PricingCard';
 import { SectionIntro } from '../components/ui/SectionIntro';
@@ -41,6 +42,10 @@ export function PriceList() {
             </AnimatedSection>
           ))}
         </div>
+
+        <AnimatedSection delay={0.2}>
+          <BoarderInquiryForm />
+        </AnimatedSection>
 
         <AnimatedSection delay={0.28} className="mt-14 overflow-hidden rounded-[2rem] bg-[#1B1A1A] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
