@@ -25,7 +25,7 @@ export function PriceList() {
               <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">Why board here</p>
               <p className="mt-5 text-2xl leading-10 text-white md:text-[2rem]">{boardingExtras.callout}</p>
             </div>
-            <img src={asset("/gallery/news-4.jpg")} alt="Thunder Road Stables paddocks and barns" className="h-full min-h-[280px] w-full object-cover" />
+            <img src={asset("/gallery/photo-9.jpg")} alt="Thunder Road Stables paddocks and barns" className="h-full min-h-[280px] w-full object-cover" />
           </div>
         </AnimatedSection>
 
