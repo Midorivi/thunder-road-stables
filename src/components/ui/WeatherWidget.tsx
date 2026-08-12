@@ -44,7 +44,7 @@ export function WeatherWidget() {
   const { label, Icon } = getIcon(weather.weatherCode);
 
   return (
-    <div className="mt-4 flex items-center gap-3 text-sm text-white/55">
+    <div className="flex items-center gap-2 text-sm text-white/55">
       <Icon className="h-4 w-4 text-[#DCAC74]" />
       <span>{weather.temperature}°F, {label}, {weather.windSpeed} mph wind</span>
     </div>

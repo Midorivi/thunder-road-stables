@@ -35,7 +35,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="mx-auto mt-6 max-w-3xl text-2xl leading-snug text-[#FAF7F2] md:text-3xl lg:text-4xl">
+          <p className="mx-auto mt-6 max-w-3xl text-[1.35rem] leading-snug text-[#FAF7F2] sm:text-2xl md:text-3xl lg:text-4xl">
             Where Beauty Meets Exceptional Care
           </p>
         </motion.div>
