@@ -46,7 +46,7 @@ export function Training() {
       <PageHero
         title="Training and Lessons"
         subtitle="Structured programs for riders and horses at every level."
-        image={asset("/gallery/photo-11.jpg")}
+        image={asset("/gallery/photo-3.jpg")}
       />
 
       <div className="page-shell py-24 md:py-32">
