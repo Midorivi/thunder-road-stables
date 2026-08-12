@@ -170,7 +170,7 @@ export const storyMoments = [
       'Suffolk County purchased the development rights in 1979. The land will never be developed. It changed hands a few more times before Brian and Jennifer Nixon ran it as B.J. Farms for over 30 years.',
       'Deb and Ken had been boarding Lotti and Lucky here for four years when the Nixons decided to sell. They closed on February 13, 2026 for $3.5 million, kept all six employees, and got to work. The Blizzard of 2026 hit their first month. "If we could make it through the blizzard," Ken said, "the summer will be easy."',
     ],
-    image: asset('/gallery/fb-cover.jpg'),
+    image: asset('/gallery/ribbon-1.jpg'),
   },
 ];
 

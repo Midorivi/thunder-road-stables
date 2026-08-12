@@ -16,7 +16,7 @@ export function OurStory() {
       <PageHero
         title="Our Story"
         subtitle="A family dream, a farm people already loved, and the work of keeping it a horse farm."
-        image={asset("/gallery/ribbon-1.jpg")}
+        image={asset("/gallery/news-4.jpg")}
       />
 
       <section className="py-24 md:py-32">
