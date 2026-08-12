@@ -140,7 +140,7 @@ export const storyMoments = [
       'She became an elementary school teacher, then spent 25 years as a stay-at-home mom raising two sons. The horse dream never left.',
       '"The same girl who wished for a horse on every birthday candle and shooting star now has a whole horse farm." That\u2019s how she announced it. "This was every wish on every shooting star. This was every birthday candle I blew out. This was it."',
     ],
-    image: asset('/gallery/news-1.jpg'),
+    image: asset('/gallery/news-4.jpg'),
   },
   {
     eyebrow: 'A shared chapter',
@@ -150,7 +150,7 @@ export const storyMoments = [
       'Deb and Ken have been married for 30 years. Their sons fell in love with a horse named Lotti during riding lessons in Middle Island, and in 2015 Lotti became the first horse Deb ever owned. Lucky followed in 2020, a rescue from South Dakota carrying his own history. Both live at the farm now.',
       '"This has really been our dream together," Ken says. "This is our little slice of heaven that we\u2019ve created here."',
     ],
-    image: asset('/gallery/news-2.jpg'),
+    image: asset('/gallery/ribbon-1.jpg'),
   },
   {
     eyebrow: 'Why "Thunder Road"',
