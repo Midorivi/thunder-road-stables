@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { BoardingComparisonTable } from '../components/ui/BoardingComparisonTable';
+import { BoardingFaq } from '../components/ui/BoardingFaq';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { BoarderInquiryForm } from '../components/ui/BoarderInquiryForm';
 import { PageHero } from '../components/ui/PageHero';
@@ -33,6 +35,10 @@ export function PriceList() {
             </div>
             <img src={asset("/gallery/photo-9.jpg")} alt="Thunder Road Stables paddocks and barns" className="h-full min-h-[280px] w-full object-cover" />
           </div>
+        </AnimatedSection>
+
+        <AnimatedSection className="mb-12">
+          <BoardingComparisonTable />
         </AnimatedSection>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -113,6 +119,10 @@ export function PriceList() {
               </ul>
             </div>
           </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.4} className="mt-14">
+          <BoardingFaq />
         </AnimatedSection>
 
         <AnimatedSection delay={0.45} className="mt-14">
