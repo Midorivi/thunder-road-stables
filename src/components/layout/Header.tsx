@@ -114,23 +114,13 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="mt-2 flex flex-col items-center gap-4">
-            <a
-              href={contactDetails.phoneHref}
-              className="flex min-h-[48px] items-center gap-2 text-lg text-[#DCAC74]"
-            >
-              <Phone className="h-5 w-5" />
-              {contactDetails.phone}
-            </a>
-
-            <Link
-              to="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="inline-flex min-h-[48px] items-center rounded-full bg-[#DCAC74] px-8 text-sm tracking-[0.18em] text-[#111517]"
-            >
-              Contact
-            </Link>
-          </div>
+          <Link
+            to="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="mt-2 inline-flex min-h-[48px] items-center rounded-full bg-[#DCAC74] px-8 text-sm tracking-[0.18em] text-[#111517]"
+          >
+            Contact
+          </Link>
         </div>
       )}
     </>
