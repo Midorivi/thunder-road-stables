@@ -66,8 +66,10 @@ export function ContactForm() {
               Select one
             </option>
             <option>Boarding</option>
+            <option>Training and Lessons</option>
             <option>Schedule a Visit</option>
-            <option>General Question</option>
+            <option>Harness Racing</option>
+            <option>Other</option>
           </select>
         </div>
       </div>
