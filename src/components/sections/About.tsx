@@ -39,28 +39,7 @@ export function About() {
   return (
     <section className="bg-[#FAF7F2] py-28 md:py-36">
       <div className="page-shell">
-        <AnimatedSection className="grid gap-4 md:grid-cols-3">
-          <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5 md:col-span-2 md:row-span-2">
-            <img src={asset("/gallery/photo-8.jpg")} alt="Thunder Road Stables barns and paddocks" className="h-full w-full object-cover" />
-          </div>
-          <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5">
-            <img src={asset("/gallery/photo-5.jpg")} alt="Walking horses through the farm" className="aspect-[4/3] w-full object-cover" />
-          </div>
-          <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5">
-            <img src={asset("/gallery/photo-12.jpg")} alt="Horse in the stable barn" className="aspect-[4/3] w-full object-cover" />
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection delay={0.1} className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="rounded-[1.5rem] bg-white/90 p-6 ring-1 ring-black/5">
-              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-              <p className="mt-2 text-[#595959]">{stat.label}</p>
-            </div>
-          ))}
-        </AnimatedSection>
-
-        <AnimatedSection delay={0.16} className="mt-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <AnimatedSection className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.42em] text-[#9a7a56]">The facility</p>
             <h2 className="mt-5 text-4xl leading-tight text-[#242323] md:text-5xl">Long Island&apos;s largest equestrian boarding facility.</h2>
@@ -74,6 +53,27 @@ export function About() {
           >
             Read Our Story
           </Link>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.08} className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat) => (
+            <div key={stat.label} className="rounded-[1.5rem] bg-white/90 p-6 ring-1 ring-black/5">
+              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+              <p className="mt-2 text-[#595959]">{stat.label}</p>
+            </div>
+          ))}
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.14} className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5 md:col-span-2 md:row-span-2">
+            <img src={asset("/gallery/photo-8.jpg")} alt="Thunder Road Stables barns and paddocks" className="h-full w-full object-cover" />
+          </div>
+          <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5">
+            <img src={asset("/gallery/photo-5.jpg")} alt="Walking horses through the farm" className="aspect-[4/3] w-full object-cover" />
+          </div>
+          <div className="overflow-hidden rounded-[2rem] shadow-[0_24px_50px_rgba(17,21,23,0.1)] ring-1 ring-black/5">
+            <img src={asset("/gallery/photo-12.jpg")} alt="Horse in the stable barn" className="aspect-[4/3] w-full object-cover" />
+          </div>
         </AnimatedSection>
       </div>
     </section>
