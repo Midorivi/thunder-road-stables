@@ -19,9 +19,9 @@ export function PriceList() {
       <div className="page-shell py-24 md:py-32">
         <AnimatedSection className="mb-14">
           <SectionIntro
-            label="Rates"
-            title="Boarding options, ordered simply and explained clearly."
-            body="These are the current core plans, along with the real day-to-day details from the farm."
+            label="Boarding options"
+            title="Four plans, each built around what your horse needs."
+            body="Every option includes access to the full 108-acre property. Outside trainers, farriers, and veterinarians are welcome."
           />
         </AnimatedSection>
 
