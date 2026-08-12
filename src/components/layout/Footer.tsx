@@ -34,9 +34,7 @@ export function Footer() {
                 {contactDetails.phone}
               </a>
             </div>
-            <div className="pt-2">
-              <WeatherWidget />
-            </div>
+
           </div>
 
           <div className="space-y-5">
@@ -88,8 +86,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 text-sm text-white/42">
+        <div className="flex flex-col gap-3 pt-8 text-sm text-white/42 md:flex-row md:items-center md:justify-between">
           <p>© 2025 Thunder Road Stables.</p>
+          <div className="flex items-center gap-3">
+            <span>Jamesport, NY</span>
+            <WeatherWidget />
+          </div>
         </div>
       </div>
     </footer>
