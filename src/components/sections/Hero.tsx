@@ -51,6 +51,9 @@ export function Hero() {
           >
             Come See the Farm
           </Link>
+          <p className="mt-8 text-xs uppercase tracking-[0.35em] text-[#DCAC74]/70">
+            108 Acres &middot; 90 Stalls &middot; 50+ Horses
+          </p>
         </motion.div>
       </div>
     </section>
