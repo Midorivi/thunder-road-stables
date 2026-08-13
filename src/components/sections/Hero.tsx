@@ -35,17 +35,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-snug text-[#FAF7F2] sm:text-2xl md:text-3xl lg:text-4xl">
-            Where Beauty Meets Exceptional Care
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
+          <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-[#FAF7F2] sm:text-2xl md:text-3xl lg:text-4xl">
             A majestic 108-acre horse boarding facility on the North Fork of Long Island.
           </p>
         </motion.div>
