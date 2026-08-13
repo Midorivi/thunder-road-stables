@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-[#FAF7F2] sm:text-2xl md:text-3xl lg:text-4xl">
-            A majestic 108-acre horse boarding facility on the North Fork of Long Island.
+            A majestic 108-acre horse boarding facility on the North Fork of Long Island. Where beauty meets exceptional care.
           </p>
         </motion.div>
 
@@ -45,15 +45,19 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Link
-            to="/contact"
-            className="mt-10 inline-flex min-h-14 items-center justify-center rounded-full bg-[#DCAC74] px-10 text-base tracking-[0.18em] text-[#111517] transition hover:scale-[1.02] hover:bg-[#e4bc8e]"
-          >
-            Come See the Farm
-          </Link>
-          <p className="mt-8 text-xs uppercase tracking-[0.35em] text-[#DCAC74]/70">
-            108 Acres &middot; 90 Stalls &middot; 50+ Horses
-          </p>
+          <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
+            <Link
+              to="/contact"
+              className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#DCAC74] px-10 text-base tracking-[0.18em] text-[#111517] transition hover:scale-[1.02] hover:bg-[#e4bc8e]"
+            >
+              Come See the Farm
+            </Link>
+            <div className="flex items-center gap-6 text-sm text-white/50">
+              <span><span className="text-lg text-[#DCAC74]">108</span> acres</span>
+              <span><span className="text-lg text-[#DCAC74]">90</span> stalls</span>
+              <span><span className="text-lg text-[#DCAC74]">50+</span> horses</span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
