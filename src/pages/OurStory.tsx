@@ -20,7 +20,28 @@ export function OurStory() {
       />
 
       <section className="py-24 md:py-32">
-        <div className="page-shell">
+        <div className="page-shell space-y-20">
+          {storyMoments.slice(0, 3).map((moment, index) => (
+            <AnimatedSection
+              key={moment.title}
+              delay={index * 0.06}
+              className={`grid gap-8 lg:grid-cols-2 lg:items-center ${index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}
+            >
+              <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_60px_rgba(17,21,23,0.12)] ring-1 ring-black/5">
+                <img src={moment.image} alt={`${moment.eyebrow} at Thunder Road Stables`} className="aspect-[4/3] w-full object-cover" />
+              </div>
+              <article className="rounded-[2rem] bg-white/88 p-8 shadow-[0_24px_50px_rgba(17,21,23,0.07)] ring-1 ring-black/5 backdrop-blur md:p-10">
+                <p className="text-xs uppercase tracking-[0.4em] text-[#9a7a56]">{moment.eyebrow}</p>
+                <h2 className="mt-5 text-4xl leading-tight text-[#111517] md:text-5xl">{moment.title}</h2>
+                <div className="mt-6 space-y-4 leading-8 text-[#595959]">
+                  {moment.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </article>
+            </AnimatedSection>
+          ))}
+
           <AnimatedSection className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <SectionIntro
               label="Stewardship"
@@ -29,7 +50,7 @@ export function OurStory() {
             />
             <div className="space-y-6">
               <div className="overflow-hidden rounded-[2rem] shadow-[0_32px_80px_rgba(17,21,23,0.12)] ring-1 ring-black/5">
-                <img src={asset("/gallery/news-2.jpg")} alt="Thunder Road Stables paddocks and fencing" className="aspect-[4/3] w-full object-cover" />
+                <img src={asset("/gallery/news-2.jpg")} alt="Deb and Ken Rothwell on horseback" className="aspect-[4/3] w-full object-cover" />
               </div>
               <blockquote className="rounded-[1.5rem] bg-[#111517] p-8 md:p-10">
                 <p className="text-xl leading-relaxed text-[#DCAC74] md:text-2xl">
@@ -39,16 +60,12 @@ export function OurStory() {
               </blockquote>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
 
-      <section className="pb-24 md:pb-32">
-        <div className="page-shell space-y-20">
-          {storyMoments.map((moment, index) => (
+          {storyMoments.slice(3).map((moment, index) => (
             <AnimatedSection
               key={moment.title}
               delay={index * 0.06}
-              className={`grid gap-8 lg:grid-cols-2 lg:items-center ${index % 2 === 1 ? 'lg:[&>div:first-child]:order-2' : ''}`}
+              className="grid gap-8 lg:grid-cols-2 lg:items-center"
             >
               <div className="overflow-hidden rounded-[2rem] shadow-[0_28px_60px_rgba(17,21,23,0.12)] ring-1 ring-black/5">
                 <img src={moment.image} alt={`${moment.eyebrow} at Thunder Road Stables`} className="aspect-[4/3] w-full object-cover" />
