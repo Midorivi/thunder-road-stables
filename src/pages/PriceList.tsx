@@ -5,10 +5,9 @@ import { BoardingFaq } from '../components/ui/BoardingFaq';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { BoarderInquiryForm } from '../components/ui/BoarderInquiryForm';
 import { PageHero } from '../components/ui/PageHero';
-import { PricingCard } from '../components/ui/PricingCard';
 import { SectionIntro } from '../components/ui/SectionIntro';
 import { asset } from '../lib/utils';
-import { boardingExtras, boardingOptions } from '../content/site';
+import { boardingExtras } from '../content/site';
 
 export function PriceList() {
   useEffect(() => {
