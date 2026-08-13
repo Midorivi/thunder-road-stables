@@ -70,15 +70,15 @@ export const homeFeatures: Array<{ title: string; description: string; icon: Luc
 export const testimonials = [
   {
     quote: 'I visited yesterday and felt the peaceful caring of the place through those horses I met over the well kept fences.',
-    author: 'Diane Brockett',
+    author: 'Diane B.',
   },
   {
     quote: 'Beautiful piece of property. I used to keep one of my horses on the farm. So glad it is being kept as a horse farm.',
-    author: 'Renee Kusnier',
+    author: 'Renee K.',
   },
   {
     quote: 'This is the piece of heaven that everybody loves out here.',
-    author: 'Councilwoman Joann Waski',
+    author: 'Joann W.',
   },
 ];
 

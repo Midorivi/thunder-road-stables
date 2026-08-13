@@ -10,7 +10,7 @@ export function Testimonials() {
           <SectionIntro
             label="From the community"
             title="People who know this property talk about it with real affection."
-            body="These words came from the ribbon cutting announcement and they say a lot about what this farm means to the people around it."
+            body="Neighbors, former boarders, and local horse people who have known this property for years."
           />
         </AnimatedSection>
 
