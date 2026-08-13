@@ -8,50 +8,48 @@ const columns = [
 ];
 
 const rows = [
-  { feature: 'Stall', values: ['No', 'No', 'Reserved', 'Yes'] },
-  { feature: 'Turnout', values: ['By arrangement', '24/7', '24/7', 'Daily'] },
-  { feature: 'Hay', values: ['You provide', 'Winter only ($1.50/flake)', 'Winter only ($1.50/flake)', '5 flakes/day (1st cut)'] },
-  { feature: 'Grain', values: ['You provide', 'Included', 'Included', 'Included'] },
-  { feature: 'Shavings', values: ['You provide', 'N/A', 'Overnight use ($15)', '5 bags/week'] },
-  { feature: 'Daily care by staff', values: ['Available ($25/day)', 'Included', 'Included', 'Included'] },
-  { feature: 'Property access', values: ['Full 108 acres', 'Full 108 acres', 'Full 108 acres', 'Full 108 acres'] },
+  { label: 'Stall', values: ['No', 'No', 'Reserved', 'Yes'] },
+  { label: 'Turnout', values: ['By arrangement', '24/7', '24/7', 'Daily'] },
+  { label: 'Hay', values: ['You provide', 'Winter only ($1.50/flake)', 'Winter only ($1.50/flake)', '5 flakes/day (1st cut)'] },
+  { label: 'Grain', values: ['You provide', 'Included', 'Included', 'Included'] },
+  { label: 'Shavings', values: ['You provide', 'N/A', 'Overnight use ($15)', '5 bags/week'] },
+  { label: 'Daily care by staff', values: ['Available ($25/day)', 'Included', 'Included', 'Included'] },
+  { label: 'Property access', values: ['Full 108 acres', 'Full 108 acres', 'Full 108 acres', 'Full 108 acres'] },
 ];
 
 function CellValue({ value }: { value: string }) {
   if (value === 'Yes' || value === 'Included') return <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#DCAC74]" />{value}</span>;
-  if (value === 'No' || value === 'N/A') return <span className="inline-flex items-center gap-2 text-white/70"><X className="h-4 w-4 text-white/45" />{value}</span>;
+  if (value === 'No' || value === 'N/A') return <span className="inline-flex items-center gap-2 text-white/50"><X className="h-4 w-4 text-white/30" />{value}</span>;
   return <span>{value}</span>;
 }
 
 export function BoardingComparisonTable() {
   return (
-    <div className="overflow-hidden rounded-[2rem] border border-[#DCAC74]/18 bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
+    <div className="overflow-hidden rounded-[2rem] bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
       <div className="border-b border-white/8 px-6 py-8 md:px-8">
         <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">At a glance</p>
-        <h2 className="mt-4 text-3xl text-[#FAF7F2] md:text-4xl">Compare the boarding plans side by side.</h2>
+        <h2 className="mt-4 text-3xl text-[#FAF7F2] md:text-4xl">Compare plans side by side.</h2>
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-[940px] border-separate border-spacing-0 text-left">
+        <table className="min-w-[900px] border-separate border-spacing-0 text-left">
           <thead>
             <tr>
-              <th className="sticky left-0 z-20 border-b border-white/8 bg-[#242323] px-6 py-5 text-sm font-medium uppercase tracking-[0.2em] text-white/60 md:px-8">Feature</th>
-              {columns.map((column) => (
-                <th key={column.name} className={`border-b border-white/8 px-5 py-5 align-top ${column.featured ? 'bg-[#DCAC74]/10' : 'bg-[#242323]'}`}>
-                  <div className={`rounded-[1.4rem] border px-4 py-4 ${column.featured ? 'border-[#DCAC74]/50 bg-[#DCAC74]/10' : 'border-white/10 bg-white/[0.03]'}`}>
-                    {column.featured ? <span className="mb-3 inline-flex rounded-full border border-[#DCAC74]/45 bg-[#DCAC74]/12 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-[#DCAC74]">Most Popular</span> : null}
-                    <p className="text-lg leading-snug text-[#FAF7F2]">{column.name}</p>
-                    <p className="mt-2 text-sm text-[#DCAC74]">{column.price}/month</p>
-                  </div>
+              <th className="sticky left-0 z-20 border-b border-white/8 bg-[#242323] px-6 py-6 md:px-8" />
+              {columns.map((col) => (
+                <th key={col.name} className={`border-b border-white/8 px-5 py-6 text-left ${col.featured ? 'bg-[#DCAC74]/8' : ''}`}>
+                  {col.featured && <span className="mb-2 inline-block text-[0.65rem] uppercase tracking-[0.22em] text-[#DCAC74]">Most Popular</span>}
+                  <p className={`text-lg ${col.featured ? 'text-[#DCAC74]' : 'text-[#FAF7F2]'}`}>{col.name}</p>
+                  <p className="mt-1 text-2xl text-[#FAF7F2]">{col.price}<span className="text-sm text-white/50">/mo</span></p>
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {rows.map((row, rowIndex) => (
-              <tr key={row.feature}>
-                <th className="sticky left-0 z-10 border-b border-white/8 bg-[#242323] px-6 py-5 text-sm font-medium text-[#FAF7F2] md:px-8">{row.feature}</th>
-                {row.values.map((value, index) => (
-                  <td key={`${row.feature}-${columns[index].name}`} className={`border-b border-white/8 px-5 py-5 text-sm leading-7 ${rowIndex === rows.length - 1 ? 'border-b-0' : ''} ${columns[index].featured ? 'bg-[#DCAC74]/6 text-[#FAF7F2]' : 'text-white/80'}`}>
+            {rows.map((row, i) => (
+              <tr key={row.label}>
+                <th className="sticky left-0 z-10 border-b border-white/6 bg-[#242323] px-6 py-4 text-sm text-white/60 md:px-8">{row.label}</th>
+                {row.values.map((value, j) => (
+                  <td key={`${row.label}-${j}`} className={`border-b border-white/6 px-5 py-4 text-sm leading-7 ${i === rows.length - 1 ? 'border-b-0' : ''} ${columns[j].featured ? 'bg-[#DCAC74]/5 text-[#FAF7F2]' : 'text-white/75'}`}>
                     <CellValue value={value} />
                   </td>
                 ))}

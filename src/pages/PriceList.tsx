@@ -41,14 +41,6 @@ export function PriceList() {
           <BoardingComparisonTable />
         </AnimatedSection>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {boardingOptions.map((option, index) => (
-            <AnimatedSection key={option.name} delay={0.08 * index}>
-              <PricingCard title={option.name} price={option.price} period={option.period} description={option.description} featured={option.featured} />
-            </AnimatedSection>
-          ))}
-        </div>
-
         <AnimatedSection delay={0.2}>
           <BoarderInquiryForm />
         </AnimatedSection>
