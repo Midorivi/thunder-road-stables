@@ -9,7 +9,7 @@ export function Testimonials() {
         <AnimatedSection className="mb-14">
           <SectionIntro
             label="From the community"
-            title="People who know this property talk about it with real affection."
+            title="Trusted with over 50 horses and counting."
             body="Neighbors, former boarders, and local horse people who have known this property for years."
           />
         </AnimatedSection>
