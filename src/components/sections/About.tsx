@@ -1,6 +1,5 @@
 import { animate, useInView, useMotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { asset } from '../../lib/utils';
 import { AnimatedSection } from '../ui/AnimatedSection';
 
@@ -39,7 +38,7 @@ export function About() {
   return (
     <section className="bg-[#FAF7F2] py-28 md:py-36">
       <div className="page-shell">
-        <AnimatedSection className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <AnimatedSection>
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.42em] text-[#9a7a56]">The facility</p>
             <h2 className="mt-5 text-4xl leading-tight text-[#242323] md:text-5xl">Long Island&apos;s largest equestrian boarding facility.</h2>
@@ -47,12 +46,6 @@ export function About() {
               Two outdoor arenas, one indoor arena, a harness racing practice track, and 108 preserved acres of open fields, ponds, and riding terrain. Daily care, nightly checks, and customized nutrition for every horse.
             </p>
           </div>
-          <Link
-            to="/our-story"
-            className="inline-flex min-h-12 shrink-0 items-center rounded-full border border-black/10 px-7 text-sm tracking-[0.18em] text-[#111517] hover:scale-[1.02] hover:border-[#DCAC74]/60 hover:text-[#9a7a56]"
-          >
-            Read Our Story
-          </Link>
         </AnimatedSection>
 
         <AnimatedSection delay={0.08} className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
