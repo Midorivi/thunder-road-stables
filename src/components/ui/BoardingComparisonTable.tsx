@@ -26,20 +26,22 @@ function CellValue({ value }: { value: string }) {
 export function BoardingComparisonTable() {
   return (
     <div className="overflow-hidden rounded-[2rem] bg-[#242323] text-white shadow-[0_28px_60px_rgba(17,21,23,0.18)]">
-      <div className="border-b border-white/8 px-6 py-8 md:px-8">
-        <p className="text-xs uppercase tracking-[0.36em] text-[#DCAC74]">At a glance</p>
-        <h2 className="mt-4 text-3xl text-[#FAF7F2] md:text-4xl">Compare plans side by side.</h2>
+      <div className="flex items-center justify-between gap-4 border-b border-white/8 px-4 py-4 md:px-6">
+        <p className="text-sm text-white/50">Compare plans side by side</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#DCAC74]">At a glance</p>
       </div>
       <div className="overflow-x-auto">
         <table className="min-w-[900px] border-separate border-spacing-0 text-left">
           <thead>
             <tr>
-              <th className="sticky left-0 z-20 border-b border-white/8 bg-[#242323] px-6 py-6 md:px-8" />
+              <th className="sticky left-0 z-20 border-b border-white/8 bg-[#242323] px-4 py-3 md:px-6" />
               {columns.map((col) => (
-                <th key={col.name} className={`border-b border-white/8 px-5 py-6 text-left ${col.featured ? 'bg-[#DCAC74]/8' : ''}`}>
-                  {col.featured && <span className="mb-2 inline-block text-[0.65rem] uppercase tracking-[0.22em] text-[#DCAC74]">Most Popular</span>}
-                  <p className={`text-lg ${col.featured ? 'text-[#DCAC74]' : 'text-[#FAF7F2]'}`}>{col.name}</p>
-                  <p className="mt-1 text-2xl text-[#FAF7F2]">{col.price}<span className="text-sm text-white/50">/mo</span></p>
+                <th key={col.name} className={`border-b border-white/8 px-4 py-3 text-left ${col.featured ? 'bg-[#DCAC74]/8' : ''}`}>
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className={`text-sm ${col.featured ? 'text-[#DCAC74]' : 'text-white/70'}`}>{col.name}</span>
+                    <span className="text-lg text-[#FAF7F2]">{col.price}<span className="text-xs text-white/40">/mo</span></span>
+                    {col.featured && <span className="text-[0.6rem] uppercase tracking-[0.18em] text-[#DCAC74]">Popular</span>}
+                  </div>
                 </th>
               ))}
             </tr>
