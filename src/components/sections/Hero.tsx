@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-[#FAF7F2] sm:text-2xl md:text-3xl lg:text-4xl">
-            A majestic 108-acre horse boarding facility on the North Fork of Long Island. Where beauty meets exceptional care.
+            A majestic horse boarding facility on the North Fork of Long Island.
           </p>
         </motion.div>
 
@@ -45,17 +45,27 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:gap-8">
-            <Link
-              to="/contact"
-              className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#DCAC74] px-10 text-base tracking-[0.18em] text-[#111517] transition hover:scale-[1.02] hover:bg-[#e4bc8e]"
-            >
-              Come See the Farm
-            </Link>
-            <div className="flex items-center gap-6 text-sm text-white/50">
-              <span><span className="text-lg text-[#DCAC74]">108</span> acres</span>
-              <span><span className="text-lg text-[#DCAC74]">90</span> stalls</span>
-              <span><span className="text-lg text-[#DCAC74]">50+</span> horses</span>
+          <Link
+            to="/contact"
+            className="mt-10 inline-flex min-h-14 items-center justify-center rounded-full bg-[#DCAC74] px-10 text-base tracking-[0.18em] text-[#111517] transition hover:scale-[1.02] hover:bg-[#e4bc8e]"
+          >
+            Come See the Farm
+          </Link>
+
+          <div className="mt-12 flex items-center justify-center gap-8 sm:gap-12">
+            <div className="text-center">
+              <p className="text-4xl text-[#DCAC74] md:text-5xl">108</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">Acres</p>
+            </div>
+            <div className="h-10 w-px bg-white/15" />
+            <div className="text-center">
+              <p className="text-4xl text-[#DCAC74] md:text-5xl">90</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">Stalls</p>
+            </div>
+            <div className="h-10 w-px bg-white/15" />
+            <div className="text-center">
+              <p className="text-4xl text-[#DCAC74] md:text-5xl">50+</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">Horses</p>
             </div>
           </div>
         </motion.div>
