@@ -35,7 +35,7 @@ export function BoardingComparisonTable() {
             <tr>
               <th className="sticky left-0 z-20 w-[140px] border-b border-white/8 bg-[#242323] px-4 py-4 md:px-6" />
               {columns.map((col) => (
-                <th key={col.name} className={`border-b border-white/8 px-4 py-4 text-left ${col.featured ? 'bg-[#DCAC74]/8' : ''}`}>
+                <th key={col.name} className={`border-b border-white/8 px-4 py-4 text-center ${col.featured ? 'bg-[#DCAC74]/8' : ''}`}>
                   <p className={`text-sm ${col.featured ? 'text-[#DCAC74]' : 'text-white/80'}`}>{col.name}</p>
                   {col.featured && <p className="mt-1 text-[0.6rem] uppercase tracking-[0.18em] text-[#DCAC74]/70">Popular</p>}
                 </th>
@@ -47,7 +47,7 @@ export function BoardingComparisonTable() {
               <tr key={row.label}>
                 <th className="sticky left-0 z-10 border-b border-white/6 bg-[#242323] px-4 py-3 text-sm text-white/60 md:px-6">{row.label}</th>
                 {row.values.map((value, j) => (
-                  <td key={`${row.label}-${j}`} className={`border-b border-white/6 px-4 py-3 text-sm leading-7 ${i === rows.length - 1 ? 'border-b-0' : ''} ${columns[j].featured ? 'bg-[#DCAC74]/5 text-[#FAF7F2]' : 'text-white/75'}`}>
+                  <td key={`${row.label}-${j}`} className={`border-b border-white/6 px-4 py-3 text-center text-sm leading-7 ${i === rows.length - 1 ? 'border-b-0' : ''} ${columns[j].featured ? 'bg-[#DCAC74]/5 text-[#FAF7F2]' : 'text-white/75'}`}>
                     <CellValue value={value} isPricing={row.label === 'Pricing'} />
                   </td>
                 ))}
