@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="mx-auto mt-6 max-w-3xl text-xl leading-relaxed text-[#FAF7F2] sm:text-2xl md:text-3xl lg:text-4xl">
-            A majestic horse boarding facility on the North Fork of Long Island.
+            A majestic 108-acre horse boarding facility on the North Fork of Long Island.
           </p>
         </motion.div>
 
@@ -51,23 +51,6 @@ export function Hero() {
           >
             Come See the Farm
           </Link>
-
-          <div className="mt-12 flex items-center justify-center gap-8 sm:gap-12">
-            <div className="text-center">
-              <p className="text-4xl text-[#DCAC74] md:text-5xl">108</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">Acres</p>
-            </div>
-            <div className="h-10 w-px bg-white/15" />
-            <div className="text-center">
-              <p className="text-4xl text-[#DCAC74] md:text-5xl">90</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">Stalls</p>
-            </div>
-            <div className="h-10 w-px bg-white/15" />
-            <div className="text-center">
-              <p className="text-4xl text-[#DCAC74] md:text-5xl">50+</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">Horses</p>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
