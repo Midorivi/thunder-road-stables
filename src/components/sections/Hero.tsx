@@ -46,7 +46,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
-            108 acres. 90 stalls. Every horse still gets the personal attention as if they&apos;re the only one.
+            A majestic 108-acre horse boarding facility on the North Fork of Long Island.
           </p>
         </motion.div>
 
