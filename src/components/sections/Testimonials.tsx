@@ -17,8 +17,14 @@ export function Testimonials() {
         <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((item, index) => (
             <AnimatedSection key={item.author} delay={index * 0.06}>
-              <blockquote className="flex h-full flex-col rounded-[1.8rem] bg-white p-8 shadow-[0_28px_55px_rgba(17,21,23,0.07)] ring-1 ring-black/5">
-                <p className="text-xl leading-8 text-[#242323]">“{item.quote}”</p>
+              <blockquote className="flex h-full flex-col rounded-[1.8rem] border-l-[3px] border-[#DCAC74] bg-white p-8 shadow-[0_28px_55px_rgba(17,21,23,0.07)] ring-1 ring-black/5">
+                <span
+                  className="mb-2 block select-none font-serif text-5xl leading-none text-[#DCAC74]/25"
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </span>
+                <p className="flex-1 text-xl leading-8 text-[#242323]">{item.quote}</p>
                 <footer className="mt-8 text-sm uppercase tracking-[0.22em] text-[#9a7a56]">{item.author}</footer>
               </blockquote>
             </AnimatedSection>
